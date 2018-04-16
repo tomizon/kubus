@@ -1,0 +1,559 @@
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, address, img,
+small, strong, form, label,
+dl, dt, dd, ol, ul, li,
+article, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+  background-color: #FFFFFF;
+}
+
+article, footer, header, menu, nav, section {
+  display: block;
+}
+
+nav, ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  display: block;
+}
+
+input {
+  vertical-align: middle;
+  display: block;
+  color: inherit;
+  font-size: 100%;
+  padding: 0;
+  line-height: 1;
+  box-shadow: none;
+  outline: 0;
+  border: none;
+  background: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+select {
+  vertical-align: middle;
+}
+
+button {
+  border: 0;
+}
+
+.clearFix {
+  zoom: 1;
+}
+
+.clearFix:after {
+  content: "";
+  display: block;
+  clear: both;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Sawarabi Gothic", sans-serif;
+  -webkit-text-size-adjust: 100%;
+  color: #000000;
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: #656565;
+  background-image: url(../images/bk_squere.svg), url(../images/bk_squere.svg), url(../images/bk_logo-y-l.svg), url(../images/bk_logo-y-r.svg);
+  background-repeat: repeat-y,repeat-y, repeat-y,repeat-y;
+  background-size: 15px 30px, 15px 30px, 40px 130px, 40px 130px;
+  background-position: top left, top right, top left, top right;
+}
+
+.wrapper {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+header {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-image: url(../images/bk_logo-x.svg);
+  background-size: 82.5px 12px;
+  background-repeat: repeat-x;
+  background-position: 35px 0px;
+}
+
+header > h1 {
+  background-color: #FFFFFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > h1 > img {
+  width: 70px;
+}
+
+header .menuBtn {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  z-index: 3;
+  background: #000000;
+}
+
+header .menuBtn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  border-bottom: solid 3px #FFFFFF;
+  -webkit-transition: .35s ease-in-out;
+  -moz-transition: .35s ease-in-out;
+  transition: .35s ease-in-out;
+  padding-top: 10px;
+  right: 10px;
+}
+
+header .menuBtn span:nth-child(1) {
+  top: 3px;
+}
+
+header .menuBtn span:nth-child(2) {
+  top: 13px;
+}
+
+header .menuBtn span:nth-child(3) {
+  top: 23px;
+}
+
+header .menuBtn span.menuBtnCircle {
+  display: block;
+  border-bottom: 3px solid transparent;
+  box-sizing: border-box;
+  border-radius: 50% 50%;
+  background-color: transparent;
+  width: 35px;
+  height: 35px;
+  z-index: 5;
+  margin-top: 7px;
+  left: 7px;
+}
+
+header .menuBtn.active span:nth-child(1) {
+  top: 15px;
+  left: 6px;
+  z-index: 10;
+  border-bottom: solid 3px #000000;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-405deg) translateY(0px) translateX(0px);
+}
+
+header .menuBtn.active span:nth-child(2), header .menuBtn.active span:nth-child(3) {
+  top: 15px;
+  border-bottom: solid 3px #000000;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 10;
+  left: 13px;
+}
+
+.globalNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 2;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.globalNav > li {
+  padding: 10px;
+  list-style-type: none;
+}
+
+.globalNav > li > a {
+  display: inline;
+  color: #000000;
+}
+
+.globalNav.active {
+  display: block;
+}
+
+.menuList {
+  padding-top: 20px;
+}
+
+.menuList > li {
+  text-align: center;
+}
+
+.menuList > li > a > img {
+  width: calc(550px/2);
+}
+
+.menuList > li + li {
+  margin-top: 10px;
+}
+
+.contactMenu {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.contactMenu > li > a > img {
+  width: 50px;
+  height: 50px;
+}
+
+.laySpTopImg > li {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.laySpTopImg > li + li {
+  margin-top: 10px;
+}
+
+.laySpTopImg > li > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+.laySpTopImg :nth-child(n+3) {
+  display: none;
+}
+
+.layTitleAboutUS > img {
+  width: calc(366px/2);
+}
+
+.layTitleInfomation > img {
+  width: calc(366px/2);
+}
+
+.layTitleGallery > img {
+  width: calc(366px/2);
+}
+
+.layTitleMaking > img {
+  width: calc(366px/2);
+}
+
+.layMakingVideo {
+  width: 270px;
+  height: 200px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layMakingVideo + .layMakingVideo {
+  margin-top: 10px;
+}
+
+.layTitleStore > img {
+  width: calc(366px/2);
+}
+
+footer {
+  padding-top: 30px;
+}
+
+footer > .pageTop {
+  display: none;
+}
+
+footer > small {
+  color: #FFFFFF;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.pageTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.pageTop > a > img {
+  width: calc(90px/2);
+}
+
+@media screen and (min-width: 700px) {
+  .laySpTopImg > li {
+    height: 400px;
+  }
+}
+
+.modSection {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-image: url(../images/bk_logo-x.svg);
+  background-size: 82.5px 12px;
+  background-repeat: repeat-x;
+  background-position: 35px 0px;
+  transition: opacity 1.0s;
+  -moz-transition: opacity 1.0s;
+  -webkit-transition: opacity 1.0s;
+  -o-transition: opacity 1.0s;
+  transition: transform 1.0s;
+  -moz-transition: transform 1.0s;
+  -webkit-transition: transform 1.0s;
+  -o-transition: transform 1.0s;
+}
+
+.modSectionContainar {
+  background-color: #FFFFFF;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h2:before {
+  content: " ";
+  background: url(../images/icon_title.svg);
+  background-size: 22px 16px;
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  position: relative;
+  width: 22px;
+  height: 26px;
+  display: inline-block;
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
+
+h2:after {
+  content: " ";
+  background: url(../images/icon_title.svg);
+  background-size: 22px 16px;
+  background-repeat: no-repeat;
+  background-position: 0 5px;
+  position: relative;
+  width: 22px;
+  height: 26px;
+  display: inline-block;
+  margin-left: 10px;
+  padding-bottom: 5px;
+}
+
+.contentGallery {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.contentGallery > li {
+  border: 1px solid #000000;
+  width: 120px;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.contentGallery > li > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+
+.modInfomationContainar > dt {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.modInfomationContainar > dt > a {
+  color: #000000;
+}
+
+.modInfomationContainar > dd {
+  margin-top: 5px;
+}
+
+.modInfomationContainar + .modInfomationContainar {
+  margin-top: 20px;
+  padding-top: 30px;
+  background-image: url(../images/bk_logo-x.svg);
+  background-size: 70px 12px;
+  background-repeat: repeat-x;
+  background-position: 5px 0px;
+}
+
+.modStoreList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.modStoreList > li {
+  border: 1px solid #000000;
+  width: 120px;
+  box-sizing: border-box;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.modStoreList > li > a > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+.modStoreList > li + li:nth-child(even) {
+  margin-right: 0;
+}
+
+.modAccordionBox {
+  position: relative;
+  padding-bottom: 80px;
+}
+
+.modAccordionBox label {
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.accordionTriggerBtn:before {
+  content: url(../images/btn_more.svg);
+  position: absolute;
+  width: 30px;
+  right: 50%;
+  bottom: 20px;
+}
+
+.modStoreListAccordionWrap {
+  position: relative;
+  overflow: hidden;
+  height: calc(400px/2);
+}
+
+.modStoreListAccordionWrap:before {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 50%, #fff 100%);
+  background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 255, 255, 0.9) 50%, #fff 100%);
+  content: "";
+  z-index: 1;
+}
+
+.accordionTrigger {
+  display: none;
+}
+
+.accordionTrigger:checked ~ .accordionTriggerBtn:before {
+  content: url(../images/btn_close.svg);
+}
+
+.accordionTrigger:checked ~ .modStoreListAccordionWrap {
+  height: auto;
+}
+
+.accordionTrigger:checked ~ .modStoreListAccordionWrap:before {
+  display: none;
+}
