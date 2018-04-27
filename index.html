@@ -87,13 +87,7 @@
 			<section id="gallery" class="modSection">
 				<h2 class="layTitleGallery"><img src="dest/images/title_gallery.png" alt="GALLERY"></h2>
 				<div class="modSectionContainar">
-					<ul class="contentGallery">
-						<li><img src="dest/images/img_top_01.jpg" alt="KUBUS"></li>
-						<li><img src="dest/images/img_top_02.jpg" alt="KUBUS"></li>
-						<li><img src="dest/images/img_top_03.jpg" alt="KUBUS"></li>
-						<li><img src="dest/images/img_top_04.jpg" alt="KUBUS"></li>
-						<li><img src="dest/images/img_top_05.jpg" alt="KUBUS"></li>
-						<li><img src="dest/images/img_top_06.jpg" alt="KUBUS"></li>
+					<ul id="instafeed" class="contentGallery">
 					</ul>
 				</div>
 			</section>
@@ -152,6 +146,23 @@
 	<script src="dest/js/fadein.js" type="text/javascript"></script>
 	<script src="dest/js/menuModal.js" type="text/javascript"></script>
 	<script src="dest/js/pageTop.js" type="text/javascript"></script>
+	<script src="dest/js/instafeed.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var userFeed = new Instafeed({
+				target: 'instafeed',
+				get: 'user',
+				userId: '1503126844',
+				sortBy: 'most-recent',
+				links: true ,
+				limit: 20,
+				resolution: 'low_resolution',
+				template: '<li><a href="{{link}}" target="_blank"><img src="{{image}}" alt="KUBUS"></a></li>',
+				accessToken: '1503126844.530ae31.0b57dd9fb68b436cac4623ce367808ce'
+			});
+			userFeed.run();
+		});
+	</script>
 	<!------
 		#KUBUS members
 			- hiroki
